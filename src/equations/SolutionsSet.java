@@ -1,5 +1,6 @@
 package equations;
 
+import java.util.List;
 import java.util.TreeSet;
 
 public class SolutionsSet implements ISolutionsSet {
@@ -48,5 +49,10 @@ public class SolutionsSet implements ISolutionsSet {
             throw new IllegalStateException("Can't get maximum value of %s solutions set!".formatted(this.type));
         }
         return this.values.last();
+    }
+
+    @Override
+    public List<Double> getValues() {
+        return values.stream().toList();
     }
 }

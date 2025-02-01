@@ -1,3 +1,4 @@
+import equations.BiQuadraticEquation;
 import equations.Equation;
 import equations.QuadraticEquation;
 
@@ -21,6 +22,6 @@ public class EquationFactory {
         } else if (coefficients.size() == 3) {
             return new QuadraticEquation(coefficients.get(0), coefficients.get(1), coefficients.get(2));
         }
-        return new QuadraticEquation(coefficients.get(0), coefficients.get(1), coefficients.get(2)); // todo return BiQuadraticEquation
+        return new BiQuadraticEquation(coefficients.get(0), coefficients.get(2), coefficients.get(4));
     };
 }
